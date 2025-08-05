@@ -87,3 +87,11 @@ canvas {
 #downloadLink:hover {
   background-color: #005fa3;
 }
+select {
+  margin-bottom: 15px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-top: 10px;
+}

@@ -10,6 +10,35 @@
   <h1>🎞️ Striply – Online Photo Booth</h1>
 
   <div class="booth">
+    <label for="bgSelect">🎨 Choose Strip Background:</label>
+<select id="bgSelect">
+  <option value="white">White</option>
+  <option value="gradient">Soft Gradient</option>
+  <option value="pink">Pastel Pink</option>
+  <option value="blue">Sky Blue</option>
+  <option value="image">Patterned Image</option>
+</select>
+<label for="filterSelect">🎛️ Choose Filter:</label>
+<select id="filterSelect">
+  <option value="none">None</option>
+  <option value="grayscale(100%)">Grayscale</option>
+  <option value="sepia(100%)">Sepia</option>
+  <option value="brightness(120%)">Brighten</option>
+  <option value="brightness(80%)">Darken</option>
+  <option value="blur(4px)">Blur</option>
+</select>
+<label for="layoutSelect">🧱 Choose Layout:</label>
+<select id="layoutSelect">
+  <option value="1x4">1×4 Strip (Vertical)</option>
+  <option value="1x3">1×3 Strip</option>
+  <option value="2x2">2×2 Grid</option>
+  <option value="2x3">2×3 Grid</option>
+  <option value="3x3">3×3 Grid</option>
+</select>
+
+
+
+
     <video id="video" autoplay></video>
     <button id="startBtn">Start Photo Strip</button>
     <div id="countdown"></div>

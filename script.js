@@ -1,7 +1,5 @@
 const video = document.getElementById('video');
 const canvas = document.getElementById('stripCanvas');
-
-
 const context = canvas.getContext('2d');
 const startBtn = document.getElementById('startBtn');
 const downloadLink = document.getElementById('downloadLink');
@@ -85,7 +83,6 @@ startBtn.addEventListener('click', async () => {
 
       shutterSound.play(); // Optional sound
       drawRoundedImage(context, video, x, y, photoSize, photoSize, borderRadius);
-      
     }
   }
 
@@ -124,41 +121,6 @@ function runCountdown(seconds) {
     }, 1000);
   });
 }
-// 🧲 Add sticker to overlay container
-stickerBar.addEventListener('click', (e) => {
-  if (e.target.classList.contains('sticker-option')) {
-    const src = e.target.getAttribute('data-src');
-    const img = document.createElement('img');
-    img.src = src;
-    img.className = 'sticker-overlay';
-    img.style.left = '100px';
-    img.style.top = '100px';
-
-    makeDraggable(img);
-    stickerContainer.appendChild(img);
-    placedStickers.push(img);
-  }
-});
-function makeDraggable(el) {
-  let offsetX = 0, offsetY = 0;
-
-  el.onmousedown = function (e) {
-    e.preventDefault();
-    offsetX = e.clientX - el.offsetLeft;
-    offsetY = e.clientY - el.offsetTop;
-
-    document.onmousemove = function (e) {
-      el.style.left = (e.clientX - offsetX) + 'px';
-      el.style.top = (e.clientY - offsetY) + 'px';
-    };
-
-    document.onmouseup = function () {
-      document.onmousemove = null;
-      document.onmouseup = null;
-    };
-  };
-}
-
 
 // 🟪 Draw rounded image on canvas
 function drawRoundedImage(ctx, img, x, y, width, height, radius) {
